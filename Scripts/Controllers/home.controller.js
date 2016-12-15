@@ -3,26 +3,27 @@
 angular.module("mainModule")
     .controller("HomeController",
     [
+
         "$scope",
-        "weatherService",
-        function($scope, weatherService) {
+
+
+        function ($scope) {
             $scope.title = "Weather Reports";
 
-            $scope.weather = [];
+            //$scope.initialized = false;
+
+            //$scope.$on('weatherService-data-event', function (evt, data) {
+            //    if (!$scope.initialized) {
+            //        $scope.data.weather = data.weather;
 
 
+            //        $scope.initialized = true;
+            //    }
 
-            weatherService.GetAllWeatherReport()
-                .then(function (data) {
-                    if (data != null) {
-                    $scope.weather = data;
-                    console.log($scope.weather);
-                    }
-
-            });
+            //    //$scope.data.setValue(0, 1, Math.round(data['']));
 
 
-
-
+            //   // console.log($scope.data.weather);
+            //});
         }
     ]);

@@ -3,6 +3,7 @@
 
 angular.module("mainModule",
 [
-    "ngRoute"
+    "ngRoute",
+    "SignalR"
 ]);
 
